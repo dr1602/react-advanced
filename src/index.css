@@ -28,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -65,4 +66,35 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 7vh;
+  width: 100vw;
+  background: rebeccapurple;
+  display: grid;
+  place-content: center;
+}
+
+.grid__productos {
+  display: grid;
+  place-content: center;
+  height: 7vh;
+  width: 30vw;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  transform: translateY(15vh);
+}
+
+.gird__productos--title{
+  display: grid;
+  place-content: center;
+}
+
+.gird__productos--buttonImg {
+  height: 4.5vh;
+  background: white;
+  border-radius: 100%;
 }

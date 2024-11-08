@@ -1,17 +1,21 @@
 
 import './App.css'
+import { Header } from './components/Header'
 import { Hijo } from './components/Hijo'
 import { UserProvider } from './providers/UserProviders'
+import { ProductProvider } from './providers/ProductsProviders'
 
 function App() {
 
   return (
     <>
       <UserProvider>
-        <div className='App'>
-          <Hijo />
-          <Hijo />
-        </div>
+        <ProductProvider>
+          <Header/>
+          <div className='App'>
+            <Hijo />
+          </div>
+        </ProductProvider>
       </UserProvider>
     </>
   )
