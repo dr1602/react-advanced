@@ -98,3 +98,11 @@ button:focus-visible {
   background: white;
   border-radius: 100%;
 }
+
+.App__menu {
+  position: relative;
+  bottom: 3vw;
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+}
