@@ -6,19 +6,37 @@ import { ProductProvider } from './providers/ProductsProviders'
 import { Header } from './components/Header'
 import { Hijo } from './components/Hijo'
 import { PulsaBotones } from './components/PulsaBotonUseRef'
+import { Contador } from './components/ContadorUseRef'
 
 function App() {
-  const [isContext, setIsContext] = useState<boolean>(false)
-  const [isRef, setIsRef] = useState<boolean>(false)
+  const [show, setShow] = useState({
+    isContext: false,
+    isRef: false,
+    isRefTwo: false,
+  })
 
   const toggleIsContext = () => {
-    setIsContext(!isContext)
-    setIsRef(false)
+    setShow({
+      isContext: true,
+      isRef: false,
+      isRefTwo: false,
+    })
   }
 
   const toggleRef = () => {
-    setIsContext(false)
-    setIsRef(!isRef)
+    setShow({
+      isContext: false,
+      isRef: true,
+      isRefTwo: false,
+    })
+  }
+
+  const toggleRefTwo = () => {
+    setShow({
+      isContext: false,
+      isRef: false,
+      isRefTwo: true,
+    })
   }
 
   return (
@@ -34,16 +52,25 @@ function App() {
         >
           useRef
         </button>
+        <button
+          onClick={toggleRefTwo}
+        >
+          useRefTwo
+        </button>
       </div>
       <UserProvider>
         <ProductProvider>
           <Header/>
           <div className='App'>
+
             {
-              !!isContext && <Hijo />
+              !!show.isContext && <Hijo />
             }
             {
-              !!isRef && <PulsaBotones/>
+              !!show.isRef && <PulsaBotones/>
+            }
+            {
+              !!show.isRefTwo && <Contador/>
             }
             
           </div>

@@ -1,20 +1,33 @@
-import React, { useState } from "react"
+// import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 
 export const PulsaBotones: React.FC = () => {
 
-    const [cont, setCont] = useState<number>(0);
+    // tener en cuenta que no queremos mostrar el valor del resultado en el jsx, si si, lo mas optimo seria el useState
+
+    // const [cont, setCont] = useState<number>(0);
+    //por el uso asincorno de setCont, devuelve el VALOR ANTERIOR: 0, 1, 2 y NO 1, 2, 3.
+
+    const cont = useRef(0)
 
     const handleClick = (incrementa: boolean) => {
         if(incrementa) {
-            setCont(cont + 1)
+            // setCont(cont + 1)
+            cont.current++
         } else {
-            setCont(cont-1)
+            // setCont(cont - 1)
+            cont.current--
         }
 
-        console.log(`Contador: ${cont}`)
+        // console.log(`Contador: ${cont}`)
+        console.log(`Contador: ${cont.current}`)
     }
 
-    // tener en cuenta que no queremos mostrar el valor del resultado en el jsx, si si, lo mas optimo seria el useState
+    console.log('Render!!!')
+    
+    // Render!!!
+    // PulsaBotonUseRef.tsx?t=1731958969537:24 Render!!!
+    // PulsaBotonUseRef.tsx?t=1731958969537:22 Contador: 0
 
     return(
         <div className='grid__productos'>
