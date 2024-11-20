@@ -8,6 +8,7 @@ import { Hijo } from './components/Hijo'
 import { PulsaBotones } from './components/PulsaBotonUseRef'
 import { Contador } from './components/ContadorUseRef'
 import { AutoFocus } from './components/AutoFocusUseRef'
+import { MenPrev } from './components/MensajePrevioUseRef'
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
     toggleIsContext, 
     toggleRef, 
     toggleRefTwo, 
-    toggleRefThree 
+    toggleRefThree,
+    toggleRefFour,
   } = useShow()
 
   return (
@@ -42,6 +44,11 @@ function App() {
         >
           useRefThree
         </button>
+        <button
+          onClick={toggleRefFour}
+        >
+          useRefFour
+        </button>
       </div>
       <UserProvider>
         <ProductProvider>
@@ -59,6 +66,9 @@ function App() {
             }
             {
               !!show.isRefThree && <AutoFocus/>
+            }
+                        {
+              !!show.isRefFour && <MenPrev/>
             }
             
           </div>

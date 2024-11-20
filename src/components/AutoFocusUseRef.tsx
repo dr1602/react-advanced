@@ -4,9 +4,9 @@ pero recuerda, no hay que abusar mucho de esto, ya que ya hay hooks especializad
 manipular el DOM, como los son el useState
 */
 
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 
-export const AutoFocus = () => {
+export const AutoFocus: React.FC = () => {
 
     const inputRef = useRef<HTMLInputElement>(null)
 

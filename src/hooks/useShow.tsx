@@ -6,6 +6,7 @@ export const useShow = () => {
         isRef: false,
         isRefTwo: false,
         isRefThree: false,
+        isRefFour: false,
     })
 
     const toggleIsContext = () => {
@@ -14,6 +15,7 @@ export const useShow = () => {
             isRef: false,
             isRefTwo: false,
             isRefThree: false,
+            isRefFour: false,
         })
     }
 
@@ -23,6 +25,7 @@ export const useShow = () => {
             isRef: true,
             isRefTwo: false,
             isRefThree: false,
+            isRefFour: false,
         })
     }
 
@@ -32,6 +35,7 @@ export const useShow = () => {
             isRef: false,
             isRefTwo: true,
             isRefThree: false,
+            isRefFour: false,
         })
     }
 
@@ -41,8 +45,26 @@ export const useShow = () => {
             isRef: false,
             isRefTwo: false,
             isRefThree: true,
+            isRefFour: false,
         })
     }
 
-    return { show, toggleIsContext, toggleRef, toggleRefTwo, toggleRefThree }
+    const toggleRefFour = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: true,
+        })
+    }
+
+    return { 
+        show, 
+        toggleIsContext, 
+        toggleRef, 
+        toggleRefTwo, 
+        toggleRefThree, 
+        toggleRefFour 
+    }
 }
