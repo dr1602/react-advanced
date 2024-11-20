@@ -1,3 +1,8 @@
+/*
+    This example uses a ref to call play() and pause() on a <video> DOM node.
+*/
+
+
 import React, { useState, useRef } from "react";
 
 export const VideoPlayer: React.FC = () => {
