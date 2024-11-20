@@ -5,10 +5,10 @@ import { UserProvider } from './providers/UserProviders'
 import { ProductProvider } from './providers/ProductsProviders'
 import { Header } from './components/Header'
 import { Hijo } from './components/Hijo'
-import { PulsaBotones } from './components/PulsaBotonUseRef'
-import { Contador } from './components/ContadorUseRef'
-import { AutoFocus } from './components/AutoFocusUseRef'
-import { MenPrev } from './components/MensajePrevioUseRef'
+import { PulsaBotones } from './components/CardUseRef/PulsaBotonUseRef'
+import { Contador } from './components/CardUseRef/ContadorUseRef'
+import { AutoFocus } from './components/CardUseRef/AutoFocusUseRef'
+import { MenPrev } from './components/CardUseRef/MensajePrevioUseRef'
 
 function App() {
 
