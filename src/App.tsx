@@ -1,43 +1,23 @@
 
 import './App.css'
-import { useState } from 'react'
+import { useShow } from './hooks/useShow'
 import { UserProvider } from './providers/UserProviders'
 import { ProductProvider } from './providers/ProductsProviders'
 import { Header } from './components/Header'
 import { Hijo } from './components/Hijo'
 import { PulsaBotones } from './components/PulsaBotonUseRef'
 import { Contador } from './components/ContadorUseRef'
+import { AutoFocus } from './components/AutoFocusUseRef'
 
 function App() {
-  const [show, setShow] = useState({
-    isContext: false,
-    isRef: false,
-    isRefTwo: false,
-  })
 
-  const toggleIsContext = () => {
-    setShow({
-      isContext: true,
-      isRef: false,
-      isRefTwo: false,
-    })
-  }
-
-  const toggleRef = () => {
-    setShow({
-      isContext: false,
-      isRef: true,
-      isRefTwo: false,
-    })
-  }
-
-  const toggleRefTwo = () => {
-    setShow({
-      isContext: false,
-      isRef: false,
-      isRefTwo: true,
-    })
-  }
+  const { 
+    show, 
+    toggleIsContext, 
+    toggleRef, 
+    toggleRefTwo, 
+    toggleRefThree 
+  } = useShow()
 
   return (
     <>
@@ -57,6 +37,11 @@ function App() {
         >
           useRefTwo
         </button>
+        <button
+          onClick={toggleRefThree}
+        >
+          useRefThree
+        </button>
       </div>
       <UserProvider>
         <ProductProvider>
@@ -71,6 +56,9 @@ function App() {
             }
             {
               !!show.isRefTwo && <Contador/>
+            }
+            {
+              !!show.isRefThree && <AutoFocus/>
             }
             
           </div>

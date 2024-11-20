@@ -106,3 +106,9 @@ button:focus-visible {
   display: flex;
   justify-content: space-between;
 }
+
+.autofocus__container {
+  width: 36vw;
+  display: flex;
+  justify-content: space-evenly;
+}
