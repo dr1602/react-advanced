@@ -7,6 +7,12 @@ export const useShow = () => {
         isRefTwo: false,
         isRefThree: false,
         isRefFour: false,
+        isRefFive: false,
+        isRefSix: false,
+        isRefSeven: false,
+        isRefEight: false,
+        isRefNine: false,
+        isRefTen: false,
     })
 
     const toggleIsContext = () => {
@@ -16,6 +22,12 @@ export const useShow = () => {
             isRefTwo: false,
             isRefThree: false,
             isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
         })
     }
 
@@ -26,6 +38,12 @@ export const useShow = () => {
             isRefTwo: false,
             isRefThree: false,
             isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
         })
     }
 
@@ -36,6 +54,12 @@ export const useShow = () => {
             isRefTwo: true,
             isRefThree: false,
             isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
         })
     }
 
@@ -46,6 +70,12 @@ export const useShow = () => {
             isRefTwo: false,
             isRefThree: true,
             isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
         })
     }
 
@@ -56,6 +86,108 @@ export const useShow = () => {
             isRefTwo: false,
             isRefThree: false,
             isRefFour: true,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
+        })
+    }
+
+    const toggleRefFive = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: false,
+            isRefFive: true,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
+        })
+    }
+
+    const toggleRefSix = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: false,
+            isRefFive: false,
+            isRefSix: true,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
+        })
+    }
+
+    const toggleRefSeven = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: true,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
+        })
+    }
+
+    const toggleRefEigth = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: true,
+            isRefNine: false,
+            isRefTen: false,
+        })
+    }
+
+    const toggleRefNine = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: true,
+            isRefTen: false,
+        })
+    }
+
+    const toggleRefTen = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: true,
         })
     }
 
@@ -65,6 +197,12 @@ export const useShow = () => {
         toggleRef, 
         toggleRefTwo, 
         toggleRefThree, 
-        toggleRefFour 
+        toggleRefFour,
+        toggleRefFive,
+        toggleRefSix,
+        toggleRefSeven,
+        toggleRefEigth,
+        toggleRefNine,
+        toggleRefTen,
     }
 }

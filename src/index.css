@@ -105,6 +105,7 @@ button:focus-visible {
   width: 30vw;
   display: flex;
   justify-content: space-between;
+  transform: translateX(-33vw);
 }
 
 .autofocus__container {

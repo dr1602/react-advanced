@@ -6,7 +6,7 @@ export const Counter: React.FC = () => {
 
     const handleClick = () => {
         ref.current = ref.current + 1;
-        alert('You clicked' + ref.current + ' times!')
+        alert('You clicked ' + ref.current + ' times!')
     }
 
     return (
