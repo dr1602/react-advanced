@@ -17,6 +17,7 @@ import { VideoPlayer } from './components/CardUseRef/NineUseRef'
 import { FormTwo } from './components/CardUseRef/TenUseRef'
 import { TareasRed } from './components/CardReducer/TareasReducer'
 import { CounterRed } from './components/CardReducer/EdadReducer'
+import { ItiReducer } from './components/CardReducer/ItiReducer'
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
     toggleRefTen,
     toggleRedOne,
     toggleRedTwo,
+    toggleRedThree,
   } = useShow()
 
   const options = [
@@ -89,6 +91,10 @@ function App() {
     {
       func: toggleRedTwo,
       title: 'useRedTwo',
+    },
+    {
+      func: toggleRedThree,
+      title: 'useRedThree',
     },
   ]
 
@@ -153,6 +159,9 @@ function App() {
             {
               !!show.isRedTwo && <CounterRed/>
             }
+            {
+              !!show.isRedThree && <ItiReducer/>
+            }
             
           </div>
         </ProductProvider>
@@ -169,5 +178,9 @@ export default App
 useReducer es muy similar a useState, pero te permite mover 
 la lógica de actualización de estado de los controladores de eventos a una única función fuera de tu componente. 
 Más información sobre elegir entre useState y useReducer.
+
+Ejercicios de practica para los reducers:
+
+https://es.react.dev/learn/extracting-state-logic-into-a-reducer#writing-reducers-well
 
 */
