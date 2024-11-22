@@ -16,6 +16,7 @@ import { CatFriends } from './components/CardUseRef/EightUseRef'
 import { VideoPlayer } from './components/CardUseRef/NineUseRef'
 import { FormTwo } from './components/CardUseRef/TenUseRef'
 import { TareasRed } from './components/CardReducer/TareasReducer'
+import { CounterRed } from './components/CardReducer/EdadReducer'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
     toggleRefNine,
     toggleRefTen,
     toggleRedOne,
+    toggleRedTwo,
   } = useShow()
 
   const options = [
@@ -83,6 +85,10 @@ function App() {
     {
       func: toggleRedOne,
       title: 'useRedOne',
+    },
+    {
+      func: toggleRedTwo,
+      title: 'useRedTwo',
     },
   ]
 
@@ -144,6 +150,9 @@ function App() {
             {
               !!show.isReducer && <TareasRed/>
             }
+            {
+              !!show.isRedTwo && <CounterRed/>
+            }
             
           </div>
         </ProductProvider>
@@ -153,3 +162,12 @@ function App() {
 }
 
 export default App
+
+
+/*
+
+useReducer es muy similar a useState, pero te permite mover 
+la lógica de actualización de estado de los controladores de eventos a una única función fuera de tu componente. 
+Más información sobre elegir entre useState y useReducer.
+
+*/

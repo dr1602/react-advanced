@@ -14,6 +14,7 @@ export const useShow = () => {
         isRefNine: false,
         isRefTen: false,
         isReducer: false,
+        isRedTwo: false,
     })
 
     const toggleIsContext = () => {
@@ -30,6 +31,7 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: false,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -47,6 +49,7 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: false,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -64,6 +67,7 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: false,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -81,6 +85,7 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: false,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -98,6 +103,7 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: false,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -115,6 +121,7 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: false,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -132,6 +139,7 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: false,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -149,6 +157,7 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: false,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -166,6 +175,7 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: false,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -183,6 +193,7 @@ export const useShow = () => {
             isRefNine: true,
             isRefTen: false,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -200,6 +211,7 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: true,
             isReducer: false,
+            isRedTwo: false,
         })
     }
 
@@ -217,6 +229,25 @@ export const useShow = () => {
             isRefNine: false,
             isRefTen: false,
             isReducer: true,
+            isRedTwo: false,
+        })
+    }
+
+    const toggleRedTwo = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
+            isReducer: false,
+            isRedTwo: true,
         })
     }
 
@@ -234,5 +265,6 @@ export const useShow = () => {
         toggleRefNine,
         toggleRefTen,
         toggleRedOne,
+        toggleRedTwo,
     }
 }
