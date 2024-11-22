@@ -102,10 +102,17 @@ button:focus-visible {
 .App__menu {
   position: relative;
   bottom: 3vw;
-  width: 30vw;
-  display: flex;
-  justify-content: space-between;
-  transform: translateX(-33vw);
+  width: 93vw;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  justify-self: center;
+}
+
+.App__menu--button {
+  width: 12vw;
+  margin-top: 1.2vh;
+  justify-self: center;
+
 }
 
 .autofocus__container {

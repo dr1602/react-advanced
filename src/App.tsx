@@ -15,6 +15,7 @@ import { Form } from './components/CardUseRef/SevenUseRef'
 import { CatFriends } from './components/CardUseRef/EightUseRef'
 import { VideoPlayer } from './components/CardUseRef/NineUseRef'
 import { FormTwo } from './components/CardUseRef/TenUseRef'
+import { TareasRed } from './components/CardReducer/TareasReducer'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
     toggleRefEigth,
     toggleRefNine,
     toggleRefTen,
+    toggleRedOne,
   } = useShow()
 
   const options = [
@@ -78,6 +80,10 @@ function App() {
       func: toggleRefTen,
       title: 'useRefTen',
     },
+    {
+      func: toggleRedOne,
+      title: 'useRedOne',
+    },
   ]
 
   return (
@@ -89,6 +95,7 @@ function App() {
           <button
             key={index}
             onClick={item.func}
+            className='App__menu--button'
           >
             {item.title}
           </button>
@@ -133,6 +140,9 @@ function App() {
             }
             {
               !!show.isRefTen && <FormTwo/>
+            }
+            {
+              !!show.isReducer && <TareasRed/>
             }
             
           </div>
