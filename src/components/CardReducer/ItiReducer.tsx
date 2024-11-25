@@ -1,16 +1,67 @@
-import { useState } from "react";
+/*
+
+Todo list (array) 
+En este ejemplo, el reducer gestiona un array de tareas. El array necesita ser actualizado sin mutación.
+
+*/
+
+// import { useState } from "react";
+import React, { useReducer } from 'react';
 import { AddTask } from "./components/AddTask";
 import { TaskList } from "./components/TaskList";
 
+/*
 interface taskProps {
     id: number;
     text: string;
     done: boolean;
 }
+*/
+
+function tasksReducer(tasks: any, action: any) {
+    switch(action.type) {
+        case 'added': {
+            return [...tasks, {
+                id: action.id,
+                text: action.text,
+                done: false
+            }]
+        }
+        case 'changed': {
+            return tasks.map((t: any) => {
+                if (t.id === action.task.id) {
+                    return action.task;
+                } else {
+                    return t
+                }
+            })
+        }
+        case 'deleted': {
+            return tasks.filter((t: any) => t.id !== action.id)
+        }
+        default: {
+            throw Error('Unknown action: ' + action.type)
+        }
+    }
+}
+
 
 export const ItiReducer: React.FC = () => {
-    const [tasks, setTasks] = useState<taskProps[]>(initialTasks)
+    // const [tasks, setTasks] = useState<taskProps[]>(initialTasks)
+    const [tasks, dispatch] = useReducer(
+        tasksReducer,
+        initialTasks
+    )
 
+    function handleAddTasks(text: string) {
+        dispatch({
+            type: 'added',
+            id: nextId++,
+            text: text,
+        })
+    }
+
+    /*
     function handleAddTasks(text: string) {
         setTasks([
             ...tasks,
@@ -21,7 +72,16 @@ export const ItiReducer: React.FC = () => {
             }
         ])
     }
+    */
 
+    function handleChangeTask(task: number) {
+        dispatch({
+            type: 'changed',
+            task: task
+        })
+    }
+
+    /*
     function handleChangeTask(task: any) {
         setTasks(
             tasks.map((t: any) => {
@@ -33,10 +93,20 @@ export const ItiReducer: React.FC = () => {
             })
         )
     }
+    */
 
+    function handleDeleteTask(taskId: number) {
+        dispatch({
+            type: 'deleted',
+            id: taskId
+        })
+    }
+
+    /*
     function handleDeleteTask(taskId: number) {
         setTasks(tasks.filter((t) => t.id !== taskId))
     }
+    */
 
     return(
         <> 
