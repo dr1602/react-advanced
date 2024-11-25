@@ -21,6 +21,7 @@ import { ItiReducer } from './components/CardReducer/ItiReducer'
 import { TodoList } from './components/CardReducer/InitReducer'
 import { TodoListStateReducer } from './components/CardReducer/StateReducer'
 import { Main } from './components/CardCall/Main'
+import { UserDetail } from './components/CardCall/UserDetail'
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
     toggleRedFour,
     toggleRedFive,
     toggleCallback,
+    toggleCallbackTwo,
   } = useShow()
 
   const options = [
@@ -113,6 +115,10 @@ function App() {
     {
       func: toggleCallback,
       title: 'useCall',
+    },
+    {
+      func: toggleCallbackTwo,
+      title: 'useCallTwo',
     },
   ]
 
@@ -188,6 +194,9 @@ function App() {
             }
             {
               !!show.isCallback && <Main/>
+            }
+            {
+              !!show.isCallbackTwo && <UserDetail userId={'63740fede2c75d8744f80a3f'}/>
             }
             
           </div>

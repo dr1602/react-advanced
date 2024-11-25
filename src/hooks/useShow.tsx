@@ -19,6 +19,7 @@ export const useShow = () => {
         isRedFour: false,
         isRedFive: false,
         isCallback: false,
+        isCallbackTwo: false,
     })
 
     const toggleIsContext = () => {
@@ -39,7 +40,8 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
-        isCallback: false,
+            isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -62,6 +64,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -84,6 +87,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -106,6 +110,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -128,6 +133,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -150,6 +156,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -172,6 +179,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -194,6 +202,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -216,6 +225,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -238,6 +248,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -259,7 +270,8 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
-        isCallback: false,
+            isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -282,6 +294,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -304,6 +317,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -326,6 +340,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -348,6 +363,7 @@ export const useShow = () => {
             isRedFour: true,
             isRedFive: false,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -370,6 +386,7 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: true,
             isCallback: false,
+            isCallbackTwo: false,
         })
     }
 
@@ -392,6 +409,30 @@ export const useShow = () => {
             isRedFour: false,
             isRedFive: false,
             isCallback: true,
+            isCallbackTwo: false,
+        })
+    }
+
+    const toggleCallbackTwo = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
+            isReducer: false,
+            isRedTwo: false,
+            isRedThree: false,
+            isRedFour: false,
+            isRedFive: false,
+            isCallback: false,
+            isCallbackTwo: true,
         })
     }
 
@@ -414,5 +455,6 @@ export const useShow = () => {
         toggleRedFour,
         toggleRedFive,
         toggleCallback,
+        toggleCallbackTwo,
     }
 }
