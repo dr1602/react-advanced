@@ -100,8 +100,10 @@ button:focus-visible {
 }
 
 .App__menu {
-  position: relative;
-  bottom: 3vw;
+  position: absolute;
+  top: 8.5vh;
+  left: 3vw;
+  height: 27vh;
   width: 93vw;
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -119,4 +121,22 @@ button:focus-visible {
   width: 36vw;
   display: flex;
   justify-content: space-evenly;
+}
+
+.InitReducer__list {
+  background-color: rebeccapurple;
+}
+
+.StateReducer__list {
+  background-color: skyblue;
+}
+
+.App__container {
+  position: absolute;
+  top: 45vh;
+  left: 3vw;
+  min-height: 30vh;
+  max-height: 51vh;
+  width: 93vw;
+  overflow-y: scroll;
 }

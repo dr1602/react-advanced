@@ -18,6 +18,8 @@ import { FormTwo } from './components/CardUseRef/TenUseRef'
 import { TareasRed } from './components/CardReducer/TareasReducer'
 import { CounterRed } from './components/CardReducer/EdadReducer'
 import { ItiReducer } from './components/CardReducer/ItiReducer'
+import { TodoList } from './components/CardReducer/InitReducer'
+import { TodoListStateReducer } from './components/CardReducer/StateReducer'
 
 function App() {
 
@@ -37,6 +39,8 @@ function App() {
     toggleRedOne,
     toggleRedTwo,
     toggleRedThree,
+    toggleRedFour,
+    toggleRedFive,
   } = useShow()
 
   const options = [
@@ -96,6 +100,14 @@ function App() {
       func: toggleRedThree,
       title: 'useRedThree',
     },
+    {
+      func: toggleRedFour,
+      title: 'useRedFour',
+    },
+    {
+      func: toggleRedFive,
+      title: 'useRedFive',
+    },
   ]
 
   return (
@@ -118,7 +130,7 @@ function App() {
       <UserProvider>
         <ProductProvider>
           <Header/>
-          <div className='App'>
+          <div className='App__container'>
 
             {
               !!show.isContext && <Hijo />
@@ -161,6 +173,12 @@ function App() {
             }
             {
               !!show.isRedThree && <ItiReducer/>
+            }
+            {
+              !!show.isRedFour && <TodoList username='Dave'/>
+            }
+                        {
+              !!show.isRedFive && <TodoListStateReducer username='Taylor'/>
             }
             
           </div>

@@ -18,9 +18,12 @@ interface taskProps {
 }
 */
 
+//Los nombres de los tipos de acción son locales a tu componente. Cada acción describe una única interacción, aunque provoque múltiples cambios en los datos. La forma del estado es arbitraria, pero normalmente será un objeto o un array.
+
 function tasksReducer(tasks: any, action: any) {
     switch(action.type) {
         case 'added': {
+            // En su lugar, devuelve siempre nuevos objetos desde tu reducer:
             return [...tasks, {
                 id: action.id,
                 text: action.text,
