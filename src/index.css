@@ -135,8 +135,10 @@ button:focus-visible {
   position: absolute;
   top: 45vh;
   left: 3vw;
-  min-height: 30vh;
+  min-height: 39  vh;
   max-height: 51vh;
   width: 93vw;
   overflow-y: scroll;
+  display: grid;
+  justify-content: center;
 }

@@ -18,6 +18,7 @@ export const useShow = () => {
         isRedThree: false,
         isRedFour: false,
         isRedFive: false,
+        isCallback: false,
     })
 
     const toggleIsContext = () => {
@@ -38,6 +39,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+        isCallback: false,
         })
     }
 
@@ -59,6 +61,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -80,6 +83,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -101,6 +105,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -122,6 +127,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -143,6 +149,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -164,6 +171,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -185,6 +193,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -206,6 +215,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -227,6 +237,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -248,6 +259,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+        isCallback: false,
         })
     }
 
@@ -269,6 +281,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -290,6 +303,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -311,6 +325,7 @@ export const useShow = () => {
             isRedThree: true,
             isRedFour: false,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -332,6 +347,7 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: true,
             isRedFive: false,
+            isCallback: false,
         })
     }
 
@@ -353,6 +369,29 @@ export const useShow = () => {
             isRedThree: false,
             isRedFour: false,
             isRedFive: true,
+            isCallback: false,
+        })
+    }
+
+    const toggleCallback = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
+            isReducer: false,
+            isRedTwo: false,
+            isRedThree: false,
+            isRedFour: false,
+            isRedFive: false,
+            isCallback: true,
         })
     }
 
@@ -373,6 +412,7 @@ export const useShow = () => {
         toggleRedTwo,
         toggleRedThree,
         toggleRedFour,
-        toggleRedFive
+        toggleRedFive,
+        toggleCallback,
     }
 }

@@ -20,6 +20,7 @@ import { CounterRed } from './components/CardReducer/EdadReducer'
 import { ItiReducer } from './components/CardReducer/ItiReducer'
 import { TodoList } from './components/CardReducer/InitReducer'
 import { TodoListStateReducer } from './components/CardReducer/StateReducer'
+import { Main } from './components/CardCall/Main'
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
     toggleRedThree,
     toggleRedFour,
     toggleRedFive,
+    toggleCallback,
   } = useShow()
 
   const options = [
@@ -107,6 +109,10 @@ function App() {
     {
       func: toggleRedFive,
       title: 'useRedFive',
+    },
+    {
+      func: toggleCallback,
+      title: 'useCall',
     },
   ]
 
@@ -177,8 +183,11 @@ function App() {
             {
               !!show.isRedFour && <TodoList username='Dave'/>
             }
-                        {
+            {
               !!show.isRedFive && <TodoListStateReducer username='Taylor'/>
+            }
+            {
+              !!show.isCallback && <Main/>
             }
             
           </div>
