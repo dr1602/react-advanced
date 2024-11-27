@@ -22,7 +22,7 @@ import { TodoList } from './components/CardReducer/InitReducer'
 import { TodoListStateReducer } from './components/CardReducer/StateReducer'
 import { Main } from './components/CardCall/Main'
 import { UserDetail } from './components/CardCall/UserDetail'
-import { ApiFetch } from './components/ApiFetch/ApiFetch'
+import { ApiFetchArrow } from './components/ApiFetch/ApiFetchArrow'
 
 function App() {
 
@@ -124,7 +124,7 @@ function App() {
     },
     {
       func: toggleApiFetch,
-      title: 'apiFetch',
+      title: 'apiFetchArrow',
     },
   ]
 
@@ -205,7 +205,7 @@ function App() {
               !!show.isCallbackTwo && <UserDetail userId={'63740fede2c75d8744f80a3f'}/>
             }
             {
-              !!show.isApiFetch && <ApiFetch id={3} />
+              !!show.isApiFetch && <ApiFetchArrow id={3} url={'https://pokeapi.co/api/v2/berry/'}/>
             }
             
           </div>
