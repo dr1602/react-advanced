@@ -15,7 +15,7 @@ export const useFetchArrow = ({ id, url }: UseFetchProps) => {
             isLoading: !prevState.isLoading,
         }))
         try {
-            const response = await fetch(`${url}${id}`);
+            const response = await fetch(`${url}${id+4}`);
 
             if(!response.ok) {
                 throw new Error('Error en la solicitud');

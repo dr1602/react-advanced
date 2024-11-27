@@ -18,6 +18,7 @@ import { Main } from './../components/CardCall/Main'
 import { UserDetail } from './../components/CardCall/UserDetail'
 import { ApiFetchArrow } from './../components/ApiFetch/ApiFetchArrow'
 import { ApiFetchFunc } from './../components/ApiFetch/ApiFetchFunc'
+import { ApiFetchCall } from './../components/ApiFetch/ApiFetchCall'
 
 const API_URL = 'https://pokeapi.co/api/v2/berry/'
 
@@ -101,5 +102,9 @@ export const options = [
     {
       title: 'apiFetchFunc',
       component: <ApiFetchFunc id={3} url={API_URL}/>,
+    },
+    {
+      title: 'apiFetchCall',
+      component: <ApiFetchCall id={3} url={API_URL}/>,
     },
   ]
