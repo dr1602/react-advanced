@@ -1,132 +1,12 @@
-
+import React, { useState } from 'react'
 import './App.css'
-import { useShow } from './hooks/useShow'
 import { UserProvider } from './providers/UserProviders'
+import { options } from './providers/componentProvider'
 import { ProductProvider } from './providers/ProductsProviders'
 import { Header } from './components/Header'
-import { Hijo } from './components/Hijo'
-import { PulsaBotones } from './components/CardUseRef/PulsaBotonUseRef'
-import { Contador } from './components/CardUseRef/ContadorUseRef'
-import { AutoFocus } from './components/CardUseRef/AutoFocusUseRef'
-import { MenPrev } from './components/CardUseRef/MensajePrevioUseRef'
-import { Counter } from './components/CardUseRef/FiveUseRef'
-import { Stopwatch } from './components/CardUseRef/SixUseRef'
-import { Form } from './components/CardUseRef/SevenUseRef'
-import { CatFriends } from './components/CardUseRef/EightUseRef'
-import { VideoPlayer } from './components/CardUseRef/NineUseRef'
-import { FormTwo } from './components/CardUseRef/TenUseRef'
-import { TareasRed } from './components/CardReducer/TareasReducer'
-import { CounterRed } from './components/CardReducer/EdadReducer'
-import { ItiReducer } from './components/CardReducer/ItiReducer'
-import { TodoList } from './components/CardReducer/InitReducer'
-import { TodoListStateReducer } from './components/CardReducer/StateReducer'
-import { Main } from './components/CardCall/Main'
-import { UserDetail } from './components/CardCall/UserDetail'
-import { ApiFetchArrow } from './components/ApiFetch/ApiFetchArrow'
 
 function App() {
-
-  const { 
-    show, 
-    toggleIsContext, 
-    toggleRef, 
-    toggleRefTwo, 
-    toggleRefThree,
-    toggleRefFour,
-    toggleRefFive,
-    toggleRefSix,
-    toggleRefSeven,
-    toggleRefEigth,
-    toggleRefNine,
-    toggleRefTen,
-    toggleRedOne,
-    toggleRedTwo,
-    toggleRedThree,
-    toggleRedFour,
-    toggleRedFive,
-    toggleCallback,
-    toggleCallbackTwo,
-    toggleApiFetch,
-  } = useShow()
-
-  const options = [
-    {
-      func: toggleIsContext,
-      title: 'useContext',
-    },
-    {
-      func: toggleRef,
-      title: 'useRef',
-    },
-    {
-      func: toggleRefTwo,
-      title: 'useRefTwo',
-    },
-    {
-      func: toggleRefThree,
-      title: 'useRefThree',
-    },
-    {
-      func: toggleRefFour,
-      title: 'useRefFour',
-    },
-    {
-      func: toggleRefFive,
-      title: 'useRefFive',
-    },
-    {
-      func: toggleRefSix,
-      title: 'useRefSix',
-    },
-    {
-      func: toggleRefSeven,
-      title: 'useRefSeven',
-    },
-    {
-      func: toggleRefEigth,
-      title: 'useRefEigth',
-    },
-    {
-      func: toggleRefNine,
-      title: 'useRefNine',
-    },
-    {
-      func: toggleRefTen,
-      title: 'useRefTen',
-    },
-    {
-      func: toggleRedOne,
-      title: 'useRedOne',
-    },
-    {
-      func: toggleRedTwo,
-      title: 'useRedTwo',
-    },
-    {
-      func: toggleRedThree,
-      title: 'useRedThree',
-    },
-    {
-      func: toggleRedFour,
-      title: 'useRedFour',
-    },
-    {
-      func: toggleRedFive,
-      title: 'useRedFive',
-    },
-    {
-      func: toggleCallback,
-      title: 'useCall',
-    },
-    {
-      func: toggleCallbackTwo,
-      title: 'useCallTwo',
-    },
-    {
-      func: toggleApiFetch,
-      title: 'apiFetchArrow',
-    },
-  ]
+  const [show, setShow] = useState<string>('')
 
   return (
     <>
@@ -136,7 +16,9 @@ function App() {
         options.map((item, index) => (
           <button
             key={index}
-            onClick={item.func}
+            onClick={() => (
+              setShow(item.title)
+            )}
             className='App__menu--button'
           >
             {item.title}
@@ -151,61 +33,10 @@ function App() {
           <div className='App__container'>
 
             {
-              !!show.isContext && <Hijo />
-            }
-            {
-              !!show.isRef && <PulsaBotones/>
-            }
-            {
-              !!show.isRefTwo && <Contador/>
-            }
-            {
-              !!show.isRefThree && <AutoFocus/>
-            }
-            {
-              !!show.isRefFour && <MenPrev/>
-            }
-            {
-              !!show.isRefFive && <Counter/>
-            }
-            {
-              !!show.isRefSix && <Stopwatch/>
-            }
-            {
-              !!show.isRefSeven && <Form/>
-            }
-            {
-              !!show.isRefEight && <CatFriends/>
-            }
-            {
-              !!show.isRefNine && <VideoPlayer/>
-            }
-            {
-              !!show.isRefTen && <FormTwo/>
-            }
-            {
-              !!show.isReducer && <TareasRed/>
-            }
-            {
-              !!show.isRedTwo && <CounterRed/>
-            }
-            {
-              !!show.isRedThree && <ItiReducer/>
-            }
-            {
-              !!show.isRedFour && <TodoList username='Dave'/>
-            }
-            {
-              !!show.isRedFive && <TodoListStateReducer username='Taylor'/>
-            }
-            {
-              !!show.isCallback && <Main/>
-            }
-            {
-              !!show.isCallbackTwo && <UserDetail userId={'63740fede2c75d8744f80a3f'}/>
-            }
-            {
-              !!show.isApiFetch && <ApiFetchArrow id={3} url={'https://pokeapi.co/api/v2/berry/'}/>
+              options.map((item, index) =>(
+                show === item.title && <React.Fragment key={index}> {item.component} </React.Fragment> 
+              ))
+              
             }
             
           </div>
