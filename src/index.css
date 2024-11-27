@@ -135,7 +135,7 @@ button:focus-visible {
   position: absolute;
   top: 45vh;
   left: 3vw;
-  min-height: 39  vh;
+  min-height: 39vh;
   max-height: 51vh;
   width: 93vw;
   overflow-y: scroll;
@@ -153,25 +153,26 @@ button:focus-visible {
 
 .Berries__Title {
   display: grid;
-  height: 3vh;
+  height: 2.7vh;
   align-items: center;
   justify-content: center;
-  margin: 0.9vw;
-  font-size: 3vw;
+  align-self: center;
+  margin: 0.9vh 0 3vh;
+  font-size: 1.5vw;
 }
 
 .Berries__GrowthTime {
   display: flex;
   width: 24vw;
-  height: 9vh;
+  height: 3vh;
   align-items: center;
   justify-content: center;
 }
 
 .Berries__GrowthTime--title {
-  font-size: 2.1vw;
+  font-size: 0.9vw;
 }
 
 .Berries__GrowthTime--value{
-  font-size: 2.4vw;
+  font-size: 1.2vw;
 }
