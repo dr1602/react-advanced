@@ -20,6 +20,7 @@ export const useShow = () => {
         isRedFive: false,
         isCallback: false,
         isCallbackTwo: false,
+        isApiFetch: false,
     })
 
     const toggleIsContext = () => {
@@ -42,6 +43,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -65,6 +67,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -88,6 +91,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -111,6 +115,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -134,6 +139,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -157,6 +163,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -180,6 +187,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -203,6 +211,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -226,6 +235,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -249,6 +259,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -272,6 +283,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -295,6 +307,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -318,6 +331,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -341,6 +355,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -364,6 +379,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -387,6 +403,7 @@ export const useShow = () => {
             isRedFive: true,
             isCallback: false,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -410,6 +427,7 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: true,
             isCallbackTwo: false,
+            isApiFetch: false,
         })
     }
 
@@ -433,6 +451,31 @@ export const useShow = () => {
             isRedFive: false,
             isCallback: false,
             isCallbackTwo: true,
+            isApiFetch: false,
+        })
+    }
+
+    const toggleApiFetch = () => {
+        setShow({
+            isContext: false,
+            isRef: false,
+            isRefTwo: false,
+            isRefThree: false,
+            isRefFour: false,
+            isRefFive: false,
+            isRefSix: false,
+            isRefSeven: false,
+            isRefEight: false,
+            isRefNine: false,
+            isRefTen: false,
+            isReducer: false,
+            isRedTwo: false,
+            isRedThree: false,
+            isRedFour: false,
+            isRedFive: false,
+            isCallback: false,
+            isCallbackTwo: false,
+            isApiFetch: true,
         })
     }
 
@@ -456,5 +499,6 @@ export const useShow = () => {
         toggleRedFive,
         toggleCallback,
         toggleCallbackTwo,
+        toggleApiFetch,
     }
 }

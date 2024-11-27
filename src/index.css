@@ -142,3 +142,36 @@ button:focus-visible {
   display: grid;
   justify-content: center;
 }
+
+.Berries{
+  background-color: #646cff;
+  width: 30vw;
+  display: grid;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.Berries__Title {
+  display: grid;
+  height: 3vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0.9vw;
+  font-size: 3vw;
+}
+
+.Berries__GrowthTime {
+  display: flex;
+  width: 24vw;
+  height: 9vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.Berries__GrowthTime--title {
+  font-size: 2.1vw;
+}
+
+.Berries__GrowthTime--value{
+  font-size: 2.4vw;
+}

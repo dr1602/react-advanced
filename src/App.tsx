@@ -22,6 +22,7 @@ import { TodoList } from './components/CardReducer/InitReducer'
 import { TodoListStateReducer } from './components/CardReducer/StateReducer'
 import { Main } from './components/CardCall/Main'
 import { UserDetail } from './components/CardCall/UserDetail'
+import { ApiFetch } from './components/ApiFetch/ApiFetch'
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
     toggleRedFive,
     toggleCallback,
     toggleCallbackTwo,
+    toggleApiFetch,
   } = useShow()
 
   const options = [
@@ -119,6 +121,10 @@ function App() {
     {
       func: toggleCallbackTwo,
       title: 'useCallTwo',
+    },
+    {
+      func: toggleApiFetch,
+      title: 'apiFetch',
     },
   ]
 
@@ -197,6 +203,9 @@ function App() {
             }
             {
               !!show.isCallbackTwo && <UserDetail userId={'63740fede2c75d8744f80a3f'}/>
+            }
+            {
+              !!show.isApiFetch && <ApiFetch id={3} />
             }
             
           </div>
