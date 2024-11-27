@@ -3,14 +3,9 @@
 
 // export const ApiFetch: React.FC<ApiFetchProps> = ({ id }) => {
     
-//     const [dataFetchFunc, setDataFetchFunc] = useState<BerryProps>()
 //     const [dataFetchInm, setDataFetchInm] = useState<BerryProps>()
 //     const [dataFetchCall, setDataFetchCall] = useState<BerryProps>()
 
-//     const [fetchStateFunc, setFetchStateFunc] = useState({
-//         error: '',
-//         isLoading: false,
-//     })
 //     const [fetchStateInm, setFetchStateInm] = useState({
 //         error: '',
 //         isLoading: false,
@@ -20,33 +15,6 @@
 //         isLoading: false,
 //     })
 
-//     async function fetchDataFunc() {
-//         setFetchStateFunc((prevState) => ({
-//             ...prevState,
-//             isLoading: !prevState.isLoading,
-//         }))
-
-//         try {
-//             const response = await fetch(`https://pokeapi.co/api/v2/berry/${id+1}`)
-
-//             if(!response.ok){
-//                 throw new Error('Error en la solicitud')
-//             }
-
-//             const data = await response.json()
-//             setDataFetchFunc(data)
-//         } catch (error) {
-//             setFetchStateFunc((prevState) => ({
-//                 ...prevState,
-//                 error: String(error),
-//             }))
-//         } finally {
-//             setFetchStateFunc((prevState) => ({
-//                 ...prevState,
-//                 isLoading: !prevState.isLoading,
-//             }))
-//         }
-//     }
 
 //     (async () => {
 //         setFetchStateInm((prevState) => ({
