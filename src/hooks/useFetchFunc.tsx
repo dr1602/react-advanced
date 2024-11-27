@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { BerryProps, UseFetchProps, FetchState } from '../types/apiFetchTypes'
 
 export const useFetchFunc = ({ id, url }: UseFetchProps) => {
@@ -43,14 +43,24 @@ export const useFetchFunc = ({ id, url }: UseFetchProps) => {
     // },[fetchDataFunc])
 
     // de esta forma depende de un cambio de id o url
+    // useEffect(() => {
+    //     fetchDataFunc();
+    // }, [id, url]);
+
+    // opcion de solucion con callback
+
+    const fetchDataFuncCallback = useCallback(fetchDataFunc,[id, url])
+
     useEffect(() => {
-        fetchDataFunc();
-      }, [id, url]);
+        fetchDataFuncCallback();
+    }, [fetchDataFuncCallback]);
+
 
     return {
         dataFetchFunc,
         fetchStateFunc,
         fetchDataFunc,
+        fetchDataFuncCallback,
     }
 
 }

@@ -3,9 +3,9 @@ import { ApiFetchProps } from '../../types/apiFetchTypes'
 
 export const ApiFetchFunc: React.FC<ApiFetchProps>= ({ id, url }) => {
     
-    const { dataFetchFunc, fetchStateFunc, fetchDataFunc } = useFetchFunc({id, url})
+    const { dataFetchFunc, fetchStateFunc, fetchDataFuncCallback } = useFetchFunc({id, url})
 
-    fetchDataFunc
+    fetchDataFuncCallback
 
     return (
         <>
