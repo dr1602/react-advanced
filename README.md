@@ -1,5 +1,72 @@
 # React + TypeScript + Vite
 
+## To set up test with Vitest in this project, you require:
+
+
+[VitestDocumentation](https://www.react-hook-form.com/)
+
+These are the commands you'll need to install (I usually use npm):
+
+1. Install vitest
+
+```sh
+npm i vitest --save-dev
+
+```
+
+2. Set in your *package.json*, site your "scripts" tag:
+
+```sh
+
+ "scripts": {
+    "test": "vitest"
+  }
+
+```
+
+**Please:** Do not delete the other tags/ commands that are already configured inside your "scripts" tag.
+
+3. Inside your *vite-env.d.ts*, add the following reference/ parameter:
+
+```md
+
+/// <reference types='vitest'>
+
+```
+4. Install jsdom to render elements in the DOM in a node environment, as the elements of the DOM will not trully be rendered
+
+```sh
+
+npm i jsdm --save-dev
+
+```
+
+5. Library of user interaction, with the testing library of react. It also work with jest
+
+```sh
+
+npm i @testing-library/react @testing-library/jest-dom --save-dev
+
+```
+
+6. User event library from the testing library.
+
+```sh
+
+npm i --save-dev @testing-library/user-event
+
+```
+
+Para que estas pruebas funcionen, es importante que cuando generes el archivo de condifiguracion **setup.ts**, lo metas en la carpeta:
+
+```md
+src/test/setup.ts
+
+```
+
+Nombrar el carpeta **Test** en lugar de **test** hizo que mis pruebas no funcionaran, esto te ahorrará unos minutos.
+
+## React + TS + Vite continuationds
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
