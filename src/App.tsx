@@ -18,7 +18,7 @@ function App() {
     <QueryClientProvider client={client}>
       <>
         <div className='App__menu'>
-
+          <h1> Learn React </h1>
         {
           options.map((item, index) => (
             <button
