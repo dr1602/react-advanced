@@ -14,7 +14,7 @@ export const ApiFetchCall: React.FC<ApiFetchProps> = ({ id, url }) => {
                 <h2> Berries from Callback: </h2>
 
                 {
-                    !!fetchStateCall.isLoading ? (
+                    !fetchStateCall.isLoading ? (
                         <div className='Berries'>
                             <h3 className='Berries__Title'> {dataFetchCall?.name} </h3>
                             <span className='Berries__GrowthTime'>

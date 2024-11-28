@@ -22,3 +22,15 @@ export interface FetchState {
     error: string;
     isLoading: boolean;
 }
+
+export interface ProductProps {
+    image: string;
+    name: string;
+    description: string;
+    category: string;
+    price: number;
+}
+
+export interface ProductCardProps {
+    product: ProductProps;
+}

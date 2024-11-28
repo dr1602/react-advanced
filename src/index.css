@@ -176,3 +176,40 @@ button:focus-visible {
 .Berries__GrowthTime--value{
   font-size: 1.2vw;
 }
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  transform: translateY(3vh);
+}
+
+.products__buttons {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 1fr;
+}
+
+.product {
+  width: 21vw;
+  height: 21vw;
+  background: grey;
+  display: grid;
+  border-radius: 15px;
+  margin-bottom: 3vw;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  overflow: hidden;
+}
+
+.left {
+  width: 21vw;
+  height: 10.5vw;
+  background-color: white;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  object-fit: contain;
+}
+
+.right {
+  width: 21vw;
+  height: 10.5vw;
+}
