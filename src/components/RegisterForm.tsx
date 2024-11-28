@@ -1,15 +1,6 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-
-export interface User {
-    username: string;
-    email: string;
-    password: string;
-}
-
-type Props = {
-    createUser: (newUser: User) => void
-}
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Props, User } from './../types/mainTypes'
 
 export const RegisterForm: React.FC<Props> = ({ createUser }) => {
 
@@ -31,18 +22,18 @@ export const RegisterForm: React.FC<Props> = ({ createUser }) => {
             }
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
-                    <label htmlFor="inputUsername">Nombre de usuario</label>
-                    <input type="text" id="inputUsername" {...register('username')} />
+                    <label htmlFor='inputUsername'>Nombre de usuario</label>
+                    <input type='text' id='inputUsername' {...register('username')} />
                 </div>
                 <div>
-                    <label htmlFor="inputEmail">Email</label>
-                    <input type="text" id="inputEmail" {...register('email')} />
+                    <label htmlFor='inputEmail'>Email</label>
+                    <input type='text' id='inputEmail' {...register('email')} />
                 </div>
                 <div>
-                    <label htmlFor="inputPassword">Password</label>
-                    <input type="text" id="inputPassword" {...register('password')} />
+                    <label htmlFor='inputPassword'>Password</label>
+                    <input type='text' id='inputPassword' {...register('password')} />
                 </div>
-                <input type="submit" value="Enviar" />
+                <input type='submit' value='Enviar' />
             </form>
         </div>
     )
