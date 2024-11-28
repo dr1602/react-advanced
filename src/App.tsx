@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { QueryClientProvider, QueryClient } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
@@ -8,9 +8,21 @@ import { UserProvider } from './providers/UserProviders'
 import { options } from './providers/componentProvider'
 import { ProductProvider } from './providers/ProductsProviders'
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
+import { Email } from './components/Email'
+import { useDispatch } from 'react-redux'
+import { addUser } from './redux/userSlice'
 
 function App() {
   const [show, setShow] = useState<string>('')
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users/1")
+      .then((response => response.json()))
+      .then((data) => dispatch(addUser(data)))
+      .catch((error) => console.log(error))
+  },[])
 
   const client = new QueryClient()
 
@@ -48,6 +60,8 @@ function App() {
               }
               
             </div>
+            <Email/>
+            <Footer/>
           </ProductProvider>
         </UserProvider>
       </>
