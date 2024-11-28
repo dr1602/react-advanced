@@ -66,6 +66,18 @@ src/test/setup.ts
 
 Nombrar el carpeta **Test** en lugar de **test** hizo que mis pruebas no funcionaran, esto te ahorrará unos minutos.
 
+## Redux && Redux Toolkit
+
+Instala
+1. Redux Toolkit
+2. React Redux
+
+```sh
+
+npm i @reduxjs/toolkit react-redux
+
+```
+
 ## React + TS + Vite continuationds
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
