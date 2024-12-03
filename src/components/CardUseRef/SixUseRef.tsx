@@ -3,13 +3,15 @@ import { useState, useRef } from 'react';
 export const Stopwatch: React.FC = () => {
     const [ startTime, setStartTime ] = useState(0);
     const [ now, setNow ] = useState(0);
-    const intervalRef = useRef(0);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const handleStart = () => {
         setStartTime(Date.now())
         setNow(Date.now())
 
-        clearInterval(intervalRef.current);
+        if (intervalRef.current){
+            clearInterval(intervalRef.current);
+        }
 
         intervalRef.current = setInterval(() => {
             setNow(Date.now())
@@ -17,7 +19,9 @@ export const Stopwatch: React.FC = () => {
     }
 
     const handleStop = () => {
-        clearInterval(intervalRef.current)
+        if(intervalRef.current) {
+            clearInterval(intervalRef?.current)
+        }
     }
 
     let secondsPassed = 0;

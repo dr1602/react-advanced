@@ -99,9 +99,19 @@ button:focus-visible {
   border-radius: 100%;
 }
 
+.App__title {
+  position: absolute;
+  top: 6vh;
+}
+
+.App__title h1 {
+  font-size: 2.7em;
+  line-height: 0.6;
+}
+
 .App__menu {
   position: absolute;
-  top: 8.5vh;
+  top: 21vh;
   left: 3vw;
   height: 27vh;
   width: 93vw;
@@ -112,6 +122,7 @@ button:focus-visible {
 
 .App__menu--button {
   width: 12vw;
+  height: 6.9vh;
   margin-top: 1.2vh;
   justify-self: center;
 
@@ -133,7 +144,7 @@ button:focus-visible {
 
 .App__container {
   position: absolute;
-  top: 45vh;
+  top: 51vh;
   left: 3vw;
   min-height: 39vh;
   max-height: 51vh;

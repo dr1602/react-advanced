@@ -30,8 +30,11 @@ function App() {
     // el proveedor del cliente para React QUery
     <QueryClientProvider client={client}>
       <>
-        <div className='App__menu'>
+        <div className='App__title'>
           <h1> Learn React </h1>
+        </div>
+        <div className='App__menu'>
+          
         {
           options.map((item, index) => (
             <button
