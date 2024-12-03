@@ -224,3 +224,38 @@ button:focus-visible {
   width: 21vw;
   height: 10.5vw;
 }
+
+.footer__container {
+  display: flex;
+  width: 100vw !important;
+  height: 7vh;
+  justify-content: center;
+  place-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer__header {
+  display: flex;
+  justify-content: center;
+  place-content: center;
+}
+
+.footer__header h5 {
+  margin: 0;
+  place-self: center;
+}
+
+.footer__list {
+  display: flex;
+  width: 60vw;
+  justify-content: center;
+  place-content: center;
+}
+
+.footer__list p {
+  width: 30vw;
+  margin: 0;
+  place-self: center;
+}

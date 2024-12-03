@@ -6,14 +6,23 @@ export const Footer: React.FC = () => {
 
     return(
         <>
-            <footer>
-                <h5> Redux Toolkit Example </h5>
+            <footer
+                className='footer__container'
+            >
+                <div
+                    className='footer__header'
+                >
+                    <h5> Redux Toolkit Example </h5>
+                </div>
+            
+                <div 
+                    className='footer__list'
+                >
+                    <p>Name: {user.name} </p>
+                    <p>Email: {user.emal} </p>
+                    <p>Username: {user.username} </p>
+                </div>
             </footer>
-            <ul>
-                <li>Name: {user.name} </li>
-                <li>Email: {user.emal} </li>
-                <li>Username: {user.username} </li>
-            </ul>
         </>
     )
 }
